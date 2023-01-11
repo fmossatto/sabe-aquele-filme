@@ -1,0 +1,29 @@
+@import 'styles/base/_variables.scss';
+
+.sectionTitle {
+    height: 2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .beforeSection {
+        background-color: $primaryColor;
+        height: 80%;
+
+        width: 2rem;
+    }
+
+    span {
+        color: $primaryColor;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .afterSection {
+        background-color: $primaryColor;
+        height: 80%;
+
+        flex: 1;
+    }
+}

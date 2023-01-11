@@ -1,0 +1,16 @@
+@import 'styles/base/_variables.scss';
+
+.filmes {
+    .pageContainer {
+        padding: 0 4.5rem;
+
+        .movieSinopse {
+            padding: 1rem 0;
+
+            p {
+                text-align: justify;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}

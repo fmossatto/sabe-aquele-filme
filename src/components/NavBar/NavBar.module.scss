@@ -1,0 +1,22 @@
+@import 'styles/base/_variables.scss';
+
+.navbar {
+    background-color: $primaryColor;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        color: #fff;
+        height: 4rem;
+        align-items: center;
+        list-style: none;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+
+        li {
+            cursor: pointer;
+        }
+    }
+}
