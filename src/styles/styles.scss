@@ -8,3 +8,17 @@
     box-sizing: border-box;
     font-family: $primaryFont;
 }
+
+body {
+    scrollbar-color: $primaryColor;
+    scrollbar-width: 5px;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $primaryColor;
+    border-radius: 20px;
+}

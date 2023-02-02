@@ -12,5 +12,20 @@
                 line-height: 1.5rem;
             }
         }
+
+        .actorList {
+            padding: 1rem 0;
+            display: flex;
+            gap: 4rem 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .recommendedMovies {
+            padding: 1rem 0;
+            display: flex;
+            gap: 4rem;
+            justify-content: center;
+        }
     }
 }

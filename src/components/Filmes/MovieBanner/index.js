@@ -1,30 +1,41 @@
 import styles from './MovieBanner.module.scss';
-import cover from 'assets/Tenacious.jpg';
 
-import { BiTime } from 'react-icons/bi';
+import { BiTime, BiListUl } from 'react-icons/bi';
+import { MdOutlineFavoriteBorder } from 'react-icons/md';
+import { BsFillBookmarkPlusFill } from 'react-icons/bs';
 
-const MovieBanner = () => {
+const MovieBanner = ({ movie }) => {
+    const cover = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    const backgroundImage = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
+
     return (
-        <section className={styles.movieBanner}>
+        <section
+            className={styles.movieBanner}
+            style={{ backgroundImage: 'url(' + backgroundImage + ')' }}
+        >
             <div className={styles.movieInfo}>
                 <div className={styles.imageContainer}>
                     <img src={cover} alt="Capa do filme" />
                     <button>Marcar como Assistido</button>
                 </div>
                 <div className={styles.movieDataContainer}>
-                    <h1>Tenacious D: Uma dupla infernal</h1>
+                    <h1>{movie.title}</h1>
+
+                    <article>
+                        <p>{movie.overview}</p>
+                    </article>
+
                     <div className={styles.movieData}>
-                        <span>2006</span>
+                        <span>{movie.release_date ? movie.release_date.substring(0, 4) : ''}</span>
                         <span>
                             <BiTime />
-                            1h 34m
+                            {`${Math.trunc(movie.runtime / 60)}h ${movie.runtime % 60}m`}
                         </span>
-                        <span>Estados Unidos</span>
+                        <ul className={styles.movieGenres}>
+                            {movie.genres &&
+                                movie.genres.map((genre) => <li key={genre.id}>{genre.name}</li>)}
+                        </ul>
                     </div>
-                    <ul className={styles.movieGenres}>
-                        <li>Comédia</li>
-                        <li>Música</li>
-                    </ul>
                 </div>
             </div>
         </section>

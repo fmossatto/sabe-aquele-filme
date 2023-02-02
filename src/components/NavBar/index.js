@@ -6,8 +6,9 @@ const NavBar = () => {
             <ul>
                 <li>Home</li>
                 <li>Filmes</li>
-                <li>User</li>
+                <li>Séries</li>
             </ul>
+            <div className={styles.avatar}></div>
         </header>
     );
 };
